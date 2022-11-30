@@ -1,11 +1,10 @@
-import './App.css';
+import "./App.css";
 
 function App() {
-  return (
-    <div className="App">
-      Start
-    </div>
-  );
+  const Checker = () => {
+    return <div></div>;
+  };
+  return <div className="App">Start</div>;
 }
 
 export default App;
