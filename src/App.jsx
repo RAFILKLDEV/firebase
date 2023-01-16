@@ -11,6 +11,7 @@ import {
   getFirestore,
   getDoc,
   snapshotEqual,
+  setDoc,
 } from "firebase/firestore";
 import {
   getDownloadURL,
@@ -183,11 +184,23 @@ function App() {
     );
   }
 
+  const regSheet = async () => {
+    await updateDoc(doc(userCollectionRef, idzin), {
+      sheets: { img: squirtle },
+    });
+  };
+
   useEffect(() => {
     console.log("Get!");
     getUsers();
     getOneUser(setTeste, "Al3SEj4en9MMmUtmuwjOS8iT7G43");
   }, []);
+
+  const squirtle =
+    "https://firebasestorage.googleapis.com/v0/b/tormenta-3582c.appspot.com/o/Fichas%2Fsquirtle.jpg?alt=media&token=7197b384-e9c8-473b-8647-aefa131a531e";
+
+  const idzin = "ekFYHKgjo9Uytcf1ulAFIjdlaE23";
+  const datakk = "";
 
   return (
     <div className="App">
@@ -204,6 +217,10 @@ function App() {
         {!imgURL && <progress value={progress} max={100} width="300" />}
         {imgURL && <img src={imgURL} alt="Imagem" />}
       </div>
+      <div className="Tabela">
+        <button onClick={() => regSheet()}></button>
+      </div>
+      <img src={datakk} alt="" height="300px" width={300} />
 
       {/* <div className="Tabela">
         <h1>Usuários</h1>
