@@ -200,7 +200,6 @@ function App() {
     "https://firebasestorage.googleapis.com/v0/b/tormenta-3582c.appspot.com/o/Fichas%2Fsquirtle.jpg?alt=media&token=7197b384-e9c8-473b-8647-aefa131a531e";
 
   const idzin = "ekFYHKgjo9Uytcf1ulAFIjdlaE23";
-  const datakk = "";
 
   return (
     <div className="App">
